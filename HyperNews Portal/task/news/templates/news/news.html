@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+<h2>Hyper news</h2>
+
+
+
+{%for dates in data%}
+    {%for date in dates%}
+        <h4>{{date}}</h4>
+    {%endfor%}
+    <ul>
+        {%for articles in dates.values%}
+            {%for article in articles%}
+                <li><a href="/news/{{article.link}}/">{{article.title}}</a></li>
+            {%endfor%}
+
+        {%endfor%}
+    </ul>
+{%endfor%}
+    <a  href="/news/create/">Add news</a>
+<form method="get">
+    Query <input name="q">
+</form>
+
+
+
+
+
+
+
+
+

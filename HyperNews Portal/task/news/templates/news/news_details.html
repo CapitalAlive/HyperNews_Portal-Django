@@ -1,0 +1,11 @@
+<head>
+    <title>News details</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<h2>{{news_dict.title}}</h2>
+<p>{{news_dict.created}}</p>
+<p>{{news_dict.text}}</p>
+<a target="_blank" href="/news/">News page</a>
